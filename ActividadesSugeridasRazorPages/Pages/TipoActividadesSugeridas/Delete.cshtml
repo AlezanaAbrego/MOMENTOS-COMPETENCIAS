@@ -1,0 +1,33 @@
+﻿@page
+@model ActividadesSugeridasRazorPages.Pages.TipoActividadesSugeridas.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+
+<h2>¿Está Seguro Que Desea Eliminar Este Tipo De Actividad Sugerida?</h2>
+<div>
+    <hr />
+    <dl >
+        <dt>
+            Id
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoActividadSugerida.IdTipoActividadSugerida)
+        </dd>
+        <dt>
+           Descripción
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoActividadSugerida.DesTipoActividadSugerida)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="TipoActividadSugerida.IdTipoActividadSugerida" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a class="btn btn-info btn-md active" role="button"  asp-page="./Index" >Cancelar</a>
+    </form>
+</div>
